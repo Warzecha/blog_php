@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtm$
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Create file</title>
+<meta http-equiv="Content-Type" content="text/html" />
+<link href="../../css/382.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body style="padding:5px; background:url(../../images/blu-bg.gif);">
+
+<h1>Create blog</h1>
+
+
+<form>
+
+  Title</br>
+  <input type="text" name="blogname"></br>
+
+  Blogpost</br>
+  <textarea name="desc"> 
+  </textarea>
+</br>
+
+
+  User name </br>
+  <input type="text" name="username"></br>
+
+  Password </br>
+  <input type="password" name="psw"></br>
+
+
+<input type="date" name="createdAt" value="<?php echo date('Y-m-d'); ?>" /> 
+
+</br>
+
+
+
+
+  <input type="file" name="attachment1">
+  <input type="file" name="attachment2">
+  <input type="file" name="attachment3">
+
+
+  <input type="submit" value="submit">
+
+</form>
+
+
+</body>
+</html>
+
+
