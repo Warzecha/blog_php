@@ -18,6 +18,11 @@
 		fwrite($infofile, "pwd_hash: " . md5($_POST["pwd"]) . "\n");
 		fwrite($infofile, "description: '" . $_POST["desc"] . "'\n"); 
 
+
+		$name2blog = fopen("name2blog.txt", "w");
+		fwrite($name2blog, $_POST["username"] . ": " . $_POST["blogname"] . "\n");
+
+
 	}
 
 

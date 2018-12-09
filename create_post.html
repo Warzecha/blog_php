@@ -9,10 +9,10 @@
 </head>
 <body style="padding:5px; background:url(../../images/blu-bg.gif);">
 
-<h1>Create blog</h1>
+<h1>Create post</h1>
 
 
-<form>
+<form action="create_post.php" method="POST" enctype="multipart/form-data">
 
   Title</br>
   <input type="text" name="blogname"></br>
@@ -29,17 +29,19 @@
   Password </br>
   <input type="password" name="psw"></br>
 
+  Date </br>
+  <input type="date" name="createdAt" value="<?php echo date('yyyy/MM/dd'); ?>" /> </br>
 
-<input type="date" name="createdAt" value="<?php echo date('Y-m-d'); ?>" /> 
+  Time </br>
+  <input type="time" name="time" /> </br>
 
 </br>
 
 
 
 
-  <input type="file" name="attachment1">
-  <input type="file" name="attachment2">
-  <input type="file" name="attachment3">
+  <input type="file" name="file" multiple>
+
 
 
   <input type="submit" value="submit">
