@@ -3,7 +3,6 @@
 
 
 
-
 	if(is_dir($_POST["blogname"]))
 	{
 		echo "Blog with this name already exists";
@@ -19,8 +18,11 @@
 		fwrite($infofile, "description: '" . $_POST["desc"] . "'\n"); 
 
 
-		$name2blog = fopen("name2blog.txt", "w");
+		$name2blog = fopen("name2blog.txt", "a");
 		fwrite($name2blog, $_POST["username"] . ": " . $_POST["blogname"] . "\n");
+
+		fclose($name2blog);
+		fclose($infofile);
 
 
 	}

@@ -1,1 +1,5 @@
-damian: emo_martynka
+Kucharz: blog_kulinarny
+: 
+Podroznik: blog_podrozniczy
+damian: ABC
+damian: ABC

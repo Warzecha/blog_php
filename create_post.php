@@ -5,6 +5,8 @@
 $name2blog = fopen("name2blog.txt", "r");
 
 
+
+
 $userHasBlog = false;
 
 while(!feof($name2blog)) {
@@ -32,25 +34,30 @@ while(!feof($name2blog)) {
     if(trim(md5($_POST["pwd"])) == trim($pwd_hash))
     {
 
-        $psot = fopen($blogname . "/". str_replace("-","",$_POST["createdAt"]) . str_replace(":","",$_POST["time"]). str_pad(getdate()["seconds"], 2, '0', STR_PAD_LEFT) . ".pst", "w");
+        $post = fopen($blogname . "/". str_replace("-","",$_POST["createdAt"]) . str_replace(":","",$_POST["time"]). str_pad(getdate()["seconds"], 2, '0', STR_PAD_LEFT) . ".pst", "w");
  
+        fwrite($post, $_POST["title"] . "\n");
+        fwrite($post, $_POST["username"] . "\n");
+        fwrite($post, $_POST['desc']);
 
-        $total = count($_FILES['files']['name']);
 
-        echo "rozmiar: " . sizeof($_FILES);
+        $total = sizeof($_FILES);
+
+        // echo "rozmiar: " . $total;
 
         // Loop through each file
         for( $i=0 ; $i < $total ; $i++ ) {
         
+
           //Get the temp file path
-          $tmpFilePath = $_FILES['files']['tmp_name'][$i];
+          $tmpFilePath = $_FILES['file']['tmp_name'];
 
           echo $tmpFilePath;
         
           //Make sure we have a file path
           if ($tmpFilePath != ""){
             //Setup our new file path
-            $newFilePath = $blogname. "/" . $_FILES['files']['name'][$i];
+            $newFilePath = $blogname. "/" . str_replace("-","",$_POST["createdAt"]) . str_replace(":","",$_POST["time"]). str_pad(getdate()["seconds"], 2, '0', STR_PAD_LEFT). $i . "." . explode("." , $_FILES['file']['name'])[1] ;
         
             //Upload the file into the temp dir
             if(move_uploaded_file($tmpFilePath, $newFilePath)) {
@@ -64,6 +71,10 @@ while(!feof($name2blog)) {
         
 
 
+        fclose($post);
+
+        echo "Adding post is successful <br>";
+        echo "<a href='blog.php'><button>More blogs</button></a><br/>";
 
 
     }

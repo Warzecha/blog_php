@@ -1,0 +1,4 @@
+user: Podroznik
+pwd_hash: d41d8cd98f00b204e9800998ecf8427e
+description: 'Blog podró&#380;niczy o mojej podró&#380;y do Azji 
+  '

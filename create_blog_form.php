@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <title>Create file</title>
 <meta http-equiv="Content-Type" content="text/html" />
@@ -9,27 +7,31 @@
 </head>
 <body style="padding:5px; background:url(../../images/blu-bg.gif);">
 
+  <?php include 'menu.php'?> 
+
+
 <h1>Create blog</h1>
 
 
 <form action="create_blog.php" method="POST">
 
-  Blog name</br>
-  <input type="text" name="blogname"></br>
+  Blog name<br>
+  <input type="text" name="blogname"><br>
 
-  Description</br>
+  Description<br>
   <textarea name="desc"> 
   </textarea>
-</br>
+<br>
 
 
-  User name </br>
-  <input type="text" name="username"></br>
+  User name <br>
+  <input type="text" name="username"><br>
 
-  Password </br>
-  <input type="password" name="psw"></br>
+  Password <br>
+  <input type="password" name="psw"><br>
 
   <input type="submit" value="submit">
+  <button type="reset" value="Reset">Reset</button>
 
 </form>
 
