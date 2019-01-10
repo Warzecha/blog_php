@@ -10,8 +10,38 @@ if($_GET['blogname'])
     {
         echo "No blog with this name found";
     }else
-
     {
+        echo "<script type=\"text/javascript\" src=\"chat.js\"></script>";
+
+        echo "
+            <div style=\"
+                position: fixed;
+                width: 30%;
+                height: 40%;
+                bottom: 0;
+                left: 70%;
+                background: white
+            \">
+
+                <p>Chat</p>
+
+                <div>
+                User name <br>
+                <input id=\"nick\" type=\"text\" name=\"nick\"><br>
+
+                Message
+                <input id=\"message\" type=\"text\" name=\"message\"> 
+
+                <input id=\"blog\" type=\"hidden\" name=\"blog\" value=\"" . $_GET['blogname'] . "\">
+                <br>
+
+
+                <button type=\"button\" id=\"send\" onclick=\"sendMessage()\">Send</button>
+
+                </div>
+            </div>
+        ";
+
         $dir = new DirectoryIterator($_GET['blogname']);
         foreach ($dir as $fileinfo) {
             if (!$fileinfo->isDot()) {
@@ -30,9 +60,9 @@ if($_GET['blogname'])
                         $author = fgets($post);
                         $desc = fgets($post);
                                 
-                        echo "<h1>" . $title . "</h1><br>";
-                        echo "<h2>By " . $author . "</h2><br>";
-                        echo "<p>" . $desc . "</p><br><br>";
+                        echo "<h1>" . $title . "</h1>";
+                        echo "<h2>By " . $author . "</h2>";
+                        echo "<p>" . $desc . "</p>";
                         echo "<a href='add_comment_form.php?blog=" . $_GET['blogname'] . "&post=" . $fileinfo->getFilename() . "'><button>Add a comment</button></a><br/>";
         
                         if(is_dir($_GET['blogname']. "/". explode(".", $fileinfo->getFilename())[0] . ".k"))
@@ -58,7 +88,7 @@ if($_GET['blogname'])
                                             $name = fgets($com);
                                             $opinion = fgets($com);
                                                     
-                                            echo "<h4>" . $type . " comment by ". $name." : '". $opinion . "'</h4><br>";
+                                            echo "<h4>" . $type . " comment by ". $name." : '". $opinion . "'</h4>";
     
                                             // echo "<p>" . $desc . "</p><br><br>";
                                             // echo "<a href='add_comment_form.php?blog=" . $_GET['blogname'] . "&com=" . $comment->getFilename() . "'><button>Add a comment</button></a><br/>";

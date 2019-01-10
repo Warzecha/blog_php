@@ -1,0 +1,12 @@
+
+
+body {
+    background-color: wheat;
+    color: black;
+}
+
+#fixed {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    }

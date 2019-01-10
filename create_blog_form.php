@@ -2,10 +2,10 @@
 <head>
 <title>Create file</title>
 <meta http-equiv="Content-Type" content="text/html" />
-<link href="../../css/382.css" rel="stylesheet" type="text/css" />
+
 
 </head>
-<body style="padding:5px; background:url(../../images/blu-bg.gif);">
+<body style="padding:5px;">
 
   <?php include 'menu.php'?> 
 

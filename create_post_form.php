@@ -2,10 +2,10 @@
 <head>
 <title>Create file</title>
 <meta http-equiv="Content-Type" content="text/html" />
-<!-- <link href="../../css/382.css" rel="stylesheet" type="text/css" /> -->
 
 </head>
-<body style="padding:5px; background:url(../../images/blu-bg.gif);">
+<body style="padding:5px;);" onload="getTime()">
+
 
   <div>
     <?php include 'menu.php';?> 
@@ -37,19 +37,20 @@
 
 
   Date <br>
-  <input type="date" name="createdAt" value="<?php echo date('Y-m-d'); ?>" /> <br>
+  <input id="dateInput" type="text" name="createdAt" onchange="checkDate(this)" /> <br>
+
 
   Time <br>
-  <input type="time" name="time" /> <br>
+  <input id="timeInput" type="text" name="time" onchange="checkTime(this)"/> <br>
 
 <br>
 
 
 
 
-  <input type="file" name="file" multiple>
+  <input id="defaultFile" type="file" name="file" onclick="addedFile()">
 
-
+  <br>
 
   <input type="submit" value="submit">
   <button type="reset" value="Reset">Reset</button>
