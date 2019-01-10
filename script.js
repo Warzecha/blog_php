@@ -3,22 +3,22 @@ window.onload = generateList;
 
 function generateList() {
 
-    var cookies = document.cookie;
+    let cookies = document.cookie;
     console.log(cookies)
     swapStyleSheet(cookies.split("=")[1]);
 
-    var ul = document.getElementById("styles");
-    var stylesList = [];
+    let ul = document.getElementById("styles");
+    let stylesList = [];
 
-    for (var i = 0; (styl = document.getElementsByTagName("link")[i]); i++) {
-        var title = document.getElementsByTagName("link")[i].getAttribute("href");
+    for (let i = 0; (styl = document.getElementsByTagName("link")[i]); i++) {
+        let title = document.getElementsByTagName("link")[i].getAttribute("href");
         if (document.getElementsByTagName("link")[i].getAttribute("id") != "pagestyle") {
             stylesList.push(title);
         }
     }
 
-    for (var i = 0; i < stylesList.length; i++) {
-        var liElem = document.createElement('li');
+    for (let i = 0; i < stylesList.length; i++) {
+        let liElem = document.createElement('li');
         liElem.innerHTML = stylesList[i].split(".")[0];
         liElem.setAttribute("styleName", stylesList[i]);
         liElem.addEventListener("click", liOnclick);
@@ -34,8 +34,8 @@ function swapStyleSheet(sheet) {
 }
 
 function liOnclick(event) {
-    var liElem = event.target;
-    var stylename = liElem.getAttribute("styleName");
+    let liElem = event.target;
+    let stylename = liElem.getAttribute("styleName");
     swapStyleSheet(stylename);
     document.cookie = "defaultStyle=" + stylename;
 }
@@ -98,7 +98,7 @@ function addedFile() {
     input.type = "file"
     input.onclick = addedFile
 
-    var div = document.getElementById('defaultFile');
+    let div = document.getElementById('defaultFile');
     div.parentNode.insertBefore(input, div);
 }
 

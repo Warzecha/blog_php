@@ -1,0 +1,5 @@
+Damian: Wiadomosc
+Damian: Druga
+elo: siema
+Damian: message
+Damian: kolejna

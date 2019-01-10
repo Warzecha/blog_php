@@ -12,18 +12,24 @@ if($_GET['blogname'])
     }else
     {
         echo "<script type=\"text/javascript\" src=\"chat.js\"></script>";
+        
 
         echo "
             <div style=\"
                 position: fixed;
                 width: 30%;
-                height: 40%;
+                height: 60%;
                 bottom: 0;
                 left: 70%;
                 background: white
             \">
 
-                <p>Chat</p>
+                <p style=\"display: inline-block;\">Chat</p>
+                <input id=\"enable_chat\" type=\"checkbox\" style=\"display: inline-block;\" onchange=\"pollServer()\">
+
+                <div id=\"chat_messages\">
+
+                </div>
 
                 <div>
                 User name <br>
