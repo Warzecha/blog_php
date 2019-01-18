@@ -1,19 +1,15 @@
+
 <html>
-<head>
-<title>Create file</title>
-<meta http-equiv="Content-Type" content="text/html" />
-
-
-</head>
+    <?php include "head.php";?> 
 <body style="padding:5px;">
 
   <?php include 'menu.php'?> 
 
 
-<h1>Create blog</h1>
+  <h1>Create blog</h1>
 
 
-<form action="create_blog.php" method="POST">
+  <form action="create_blog.php" method="POST">
 
   Blog name<br>
   <input type="text" name="blogname"><br>

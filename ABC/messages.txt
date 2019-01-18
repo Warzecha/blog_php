@@ -3,3 +3,7 @@ Damian: Druga
 elo: siema
 Damian: message
 Damian: kolejna
+Inny:proba
+Inny:kolejny
+Damian:wiadomosc
+damian:kolejna

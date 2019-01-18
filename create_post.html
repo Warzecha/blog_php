@@ -1,13 +1,9 @@
-<!-- <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtm$ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Create file</title>
-<meta http-equiv="Content-Type" content="text/html" />
-<!-- <link href="../../css/382.css" rel="stylesheet" type="text/css" /> -->
+<html>
+    <?php
+    include "head.php";
+    ?> 
 
-</head>
-<body style="padding:5px; background:url(../../images/blu-bg.gif);">
+<body>
 
   <div>
     <?php include 'menu.php';?> 
@@ -20,31 +16,31 @@
 <form action="create_post.php" method="POST" enctype="multipart/form-data">
 
 
-  User name </br>
-  <input type="text" name="username"></br>
+  User name <br>
+  <input type="text" name="username"><br>
 
-  Password </br>
-  <input type="password" name="psw"></br>
+  Password <br>
+  <input type="password" name="psw"><br>
 
 
 
-  Title</br>
-  <input type="text" name="title"></br>
+  Title<br>
+  <input type="text" name="title"><br>
 
-  Blogpost</br>
+  Blogpost<br>
   <textarea name="desc"> 
   </textarea>
-</br>
+<br>
 
 
 
-  Date </br>
-  <input type="date" name="createdAt" value="<?php echo date('yyyy/MM/dd'); ?>" /> </br>
+  Date <br>
+  <input type="date" name="createdAt" value="<?php echo date('yyyy/MM/dd'); ?>" /> <br>
 
-  Time </br>
-  <input type="time" name="time" /> </br>
+  Time <br>
+  <input type="time" name="time" /> <br>
 
-</br>
+<br>
 
 
 

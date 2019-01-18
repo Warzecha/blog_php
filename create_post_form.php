@@ -1,10 +1,12 @@
 <html>
-<head>
-<title>Create file</title>
-<meta http-equiv="Content-Type" content="text/html" />
+    <?php
+    include "head.php";
 
-</head>
-<body style="padding:5px;);" onload="getTime()">
+    echo "<body >";
+    
+    ?> 
+
+<body style="padding:5px;" onload="getTime()">
 
 
   <div>

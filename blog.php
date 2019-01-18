@@ -1,8 +1,11 @@
 <?php
 
+include "head.php";
+
+echo "<body >";
 include "menu.php";
 
-
+echo "<script type=\"text/javascript\" src=\"script.js\"></script>";
 
 if($_GET['blogname'])
 {
@@ -21,22 +24,28 @@ if($_GET['blogname'])
                 height: 60%;
                 bottom: 0;
                 left: 70%;
-                background: white
+                background: white;
+                font-size: 13px;
+                color: black;
+                border-style: solid;
             \">
 
-                <p style=\"display: inline-block;\">Chat</p>
-                <input id=\"enable_chat\" type=\"checkbox\" style=\"display: inline-block;\" onchange=\"pollServer()\">
+                <p style=\"display: inline-block;\"> Chat</p>
+                <input id=\"enable_chat\" type=\"checkbox\" style=\"display: inline-block;\" onchange=\"getMessages()\">
 
-                <div id=\"chat_messages\">
+                <div id=\"chat_messages\" style=\"
+                overflow:scroll;
+                max-height: 160px;
+                \">
 
                 </div>
 
                 <div>
-                User name <br>
-                <input id=\"nick\" type=\"text\" name=\"nick\"><br>
+                 User name <br>
+                <input id=\"nick\" type=\"text\" name=\"nick\" disabled><br>
 
-                Message
-                <input id=\"message\" type=\"text\" name=\"message\"> 
+                 Message
+                <input id=\"message\" type=\"text\" name=\"message\" disabled> 
 
                 <input id=\"blog\" type=\"hidden\" name=\"blog\" value=\"" . $_GET['blogname'] . "\">
                 <br>

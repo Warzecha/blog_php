@@ -2,9 +2,9 @@
 window.onload = generateList;
 
 function generateList() {
+    console.log('generateStyleList')
 
     let cookies = document.cookie;
-    console.log(cookies)
     swapStyleSheet(cookies.split("=")[1]);
 
     let ul = document.getElementById("styles");
@@ -26,7 +26,6 @@ function generateList() {
     }
 }
 
-// document.body.addEventListener("load", generateList, false);
 
 
 function swapStyleSheet(sheet) {
@@ -43,6 +42,8 @@ function liOnclick(event) {
 
 
 function getTime() {
+
+    console.log('getTime')
     generateList()
 
     let date = new Date()
