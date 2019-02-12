@@ -7,3 +7,6 @@ Inny:proba
 Inny:kolejny
 Damian:wiadomosc
 damian:kolejna
+test:test
+test:hej
+test2:wiadomosc

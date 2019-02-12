@@ -8,6 +8,7 @@ function generateList() {
     swapStyleSheet(cookies.split("=")[1]);
 
     let ul = document.getElementById("styles");
+    ul.innerHTML = ""
     let stylesList = [];
 
     for (let i = 0; (styl = document.getElementsByTagName("link")[i]); i++) {
@@ -60,7 +61,7 @@ function getTime() {
 }
 
 function checkDate(el) {
-    let re = new RegExp('([0-9]{4})-([0-9]{2})-([0-9]{2})');
+    let re = new RegExp('^([0-9]{4})-([0-9]{2})-([0-9]{2})$');
     let match = re.exec(el.value)
 
     if (match == null) {
@@ -77,7 +78,7 @@ function checkDate(el) {
 }
 
 function checkTime(el) {
-    let re = new RegExp('([0-9]{2}):([0-9]{2})');
+    let re = new RegExp('^([0-9]{2}):([0-9]{2})$');
 
     let match = re.exec(el.value)
 
